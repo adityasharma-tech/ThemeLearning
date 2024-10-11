@@ -10,7 +10,7 @@ import {
   View,
 } from 'native-base';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}: any) {
   const {toggleColorMode} = useColorMode();
   const text = useColorModeValue(' Light', ' Dark');
   const bg = useColorModeValue('warmGray.50', 'coolGray.800');
@@ -28,6 +28,9 @@ export default function HomeScreen() {
         </View>
         <Button onPress={toggleColorMode} h={10}>
           Toggle Mode
+        </Button>
+        <Button marginY={5} onPress={()=>{navigation.push("NativeWindScreen")}}>
+            View Native Wind Page
         </Button>
       </Center>
     </Box>

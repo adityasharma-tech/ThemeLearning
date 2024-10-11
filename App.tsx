@@ -5,6 +5,7 @@ import {RootStackParamList} from './source/lib/RootStackParamList';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import NativeWindScreen from './source/screens/NativeWindScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -42,6 +43,7 @@ function App() {
           name="Home"
           component={HomeScreen}
         />
+        <Stack.Screen name='NativeWindScreen' component={NativeWindScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
